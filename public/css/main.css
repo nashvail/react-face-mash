@@ -1,1 +1,232 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}.App-header{background-color:#222222;height:150px;padding:20px;color:white}.App{text-align:center}.App-logo{animation:App-logo-spin infinite 20s linear;height:80px}.App-intro{font-size:large}@keyframes App-logo-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* line 5, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.1.5/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../../src/Styles/Components/_App.scss */
+.App {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 10, ../../src/Styles/Components/_App.scss */
+.separator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-color: #000;
+  border: 8px solid #fff;
+  z-index: 999;
+  text-align: center;
+  line-height: 140px;
+  font-family: 'Quicksand';
+  font-weight: 700;
+  color: #fff;
+  font-size: 2em;
+}
+
+/* line 1, ../../src/Styles/Components/_Person.scss */
+.person {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+/* line 11, ../../src/Styles/Components/_Person.scss */
+.person:hover {
+  background-color: #12ADF7;
+}
+/* line 15, ../../src/Styles/Components/_Person.scss */
+.person:hover .personName {
+  color: #fff;
+}
+/* line 19, ../../src/Styles/Components/_Person.scss */
+.person:hover .personImage {
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+@-webkit-keyframes flipIn {
+  from {
+    -moz-transform: perspective(800px) rotate3d(0, 1, 0, 90deg) scale(1);
+    -ms-transform: perspective(800px) rotate3d(0, 1, 0, 90deg) scale(1);
+    -webkit-transform: perspective(800px) rotate3d(0, 1, 0, 90deg) scale(1);
+    transform: perspective(800px) rotate3d(0, 1, 0, 90deg) scale(1);
+    opacity: 0;
+  }
+  to {
+    -moz-transform: perspective(800px);
+    -ms-transform: perspective(800px);
+    -webkit-transform: perspective(800px);
+    transform: perspective(800px);
+  }
+}
+/* line 12, ../../src/Styles/Components/_PersonImage.scss */
+.personImage {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  background-size: cover;
+  -moz-box-shadow: 0px 15px 12px 0px rgba(0, 0, 0, 0.22), 0px 19px 38px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 15px 12px 0px rgba(0, 0, 0, 0.22), 0px 19px 38px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 15px 12px 0px rgba(0, 0, 0, 0.22), 0px 19px 38px 0px rgba(0, 0, 0, 0.3);
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.17, 0.67, 0.17, 1.27);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.17, 0.67, 0.17, 1.27);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.17, 0.67, 0.17, 1.27);
+  transition: transform 0.3s cubic-bezier(0.17, 0.67, 0.17, 1.27);
+  -moz-perspective: 800;
+  -webkit-perspective: 800;
+  perspective: 800;
+}
+
+/* line 22, ../../src/Styles/Components/_PersonImage.scss */
+.personFlipping {
+  -moz-animation: flipIn 0.5s cubic-bezier(0.17, 0.67, 0.17, 1.27);
+  -webkit-animation: flipIn 0.5s cubic-bezier(0.17, 0.67, 0.17, 1.27);
+  animation: flipIn 0.5s cubic-bezier(0.17, 0.67, 0.17, 1.27);
+}
+
+/* line 1, ../../src/Styles/Components/_PersonName.scss */
+.personName {
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+  letter-spacing: 1px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@keyframes comengo {
+  0% {
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* line 13, ../../src/Styles/Components/_Bubble.scss */
+.bubbleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 25, ../../src/Styles/Components/_Bubble.scss */
+.bubble {
+  width: 180px;
+  height: 180px;
+  background-color: #6ED66E;
+  border-radius: 100%;
+  font-family: Quicksand-Bold;
+  color: #fff;
+  font-size: 3.5em;
+  text-align: center;
+  line-height: 180px;
+  border: 8px solid white;
+  z-index: 999;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -moz-animation: comengo 0.5s cubic-bezier(0.05, 1.07, 0.32, 1.21) 0s 2 alternate forwards running;
+  -webkit-animation: comengo 0.5s cubic-bezier(0.05, 1.07, 0.32, 1.21) 0s 2 alternate forwards running;
+  animation: comengo 0.5s cubic-bezier(0.05, 1.07, 0.32, 1.21) 0s 2 alternate forwards running;
+}

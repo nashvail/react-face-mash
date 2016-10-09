@@ -1,8 +1,14 @@
+@import "./variables";
+
 // =====================================================
 // Imports
 // =====================================================
 
 @import "compass";
+@import "compass/css3";
 @import "compass/reset";
 @import "Components/App";
-@import "Components/Header";
+@import "Components/Person";
+@import "Components/PersonImage";
+@import "Components/PersonName";
+@import "Components/Bubble";
